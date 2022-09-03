@@ -1,6 +1,9 @@
+import {useState, useEffect} from 'react';
 import React from 'react';
 import './App.css';
 import axios from 'axios'; //needed?
+
+
 
 function App() {
 
@@ -26,7 +29,7 @@ function App() {
       alert('something went wrong!');
     });
   }
-// stopped here-pick up from here
+
 
 
 
@@ -38,14 +41,7 @@ function App() {
         </header>
         <p>Gallery goes here</p>
         <ul>
-        {
-          galleryItems.map(items => {
-            return
-            <li key={item.id}>
-              {item.description}
-              </li>
-          })
-        }
+       
         </ul>
       </div>
     );
