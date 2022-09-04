@@ -1,15 +1,15 @@
 import {useState, useEffect} from 'react';
 
 
-function GalleryList() {
+/*function GalleryItems() {
     return (
         {      
             <li> 
-               { galleryList.map(items => {
+               { galleryItems.map(items => {
                     return <GalleryItems key={item.id} item={item}/> 
                     </li>   
-            })}
-            
+            })
+        }   
             
         
     )

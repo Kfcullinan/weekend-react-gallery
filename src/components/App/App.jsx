@@ -7,7 +7,7 @@ import axios from 'axios'; //needed?
 
 function App() {
 
-  const [galleryList, galleryItems] = useState ([
+  const [galleryItems, setGalleryItems] = useState ([
 
   ]);
 
@@ -24,15 +24,11 @@ function App() {
     }).then(response => {
       setGalleryItems(response.data);
       console.log(response.data);
-    }).catch(error =>{
+    }).catch(error => {
       console.log(error);
       alert('something went wrong!');
     });
   }
-
-
-
-
 
     return (
       <div className="App">
@@ -41,7 +37,16 @@ function App() {
         </header>
         <p>Gallery goes here</p>
         <ul>
-       
+        {
+        galleryItems.map((galleryItems) => {
+          console.log(galleryItems);
+          return <li key={galleryItems.id} >
+            {galleryItems.description} likes: {galleryItems.likes}
+            <img src={galleryItems.path} />
+            </li>
+
+        })
+       }
         </ul>
       </div>
     );
