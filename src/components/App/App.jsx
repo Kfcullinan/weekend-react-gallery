@@ -2,7 +2,7 @@ import {useState, useEffect} from 'react';
 import React from 'react';
 import './App.css';
 import axios from 'axios'; //needed?
-
+import GalleryList from '../GalleryList/GalleryList'
 
 
 function App() {
@@ -36,18 +36,7 @@ function App() {
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
         <p>Gallery goes here</p>
-        <ul>
-        {
-        galleryItems.map((galleryItems) => {
-          console.log(galleryItems);
-          return <li key={galleryItems.id} >
-            {galleryItems.description} likes: {galleryItems.likes}
-            <img src={galleryItems.path} />
-            </li>
-
-        })
-       }
-        </ul>
+        <GalleryList/>
       </div>
     );
 }

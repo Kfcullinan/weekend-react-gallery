@@ -1,17 +1,21 @@
 import {useState, useEffect} from 'react';
 
 
-/*function GalleryItems() {
+function GalleryItems() {
     return (
-        {      
-            <li> 
-               { galleryItems.map(items => {
-                    return <GalleryItems key={item.id} item={item}/> 
-                    </li>   
-            })
-        }   
-            
-        
-    )
-}
+        <ul>
+        {
+        galleryItems.map((galleryItems) => {
+          console.log(galleryItems);
+          return <li key={galleryItems.id} >
+            {galleryItems.description} likes: {galleryItems.likes}
+            <img src={galleryItems.path} />
+            </li>
+
+        })
+       }
+        </ul>
+    );
+    }
+    
 export default GalleryList;
