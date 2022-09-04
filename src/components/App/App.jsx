@@ -6,7 +6,7 @@ import axios from 'axios'; //needed?
 
 
 function App() {
-
+//          GETTER      SETTER - CREATE VARIABLES USING USESTATE AS BELOW
   const [galleryItems, setGalleryItems] = useState ([
 
   ]);
@@ -16,7 +16,7 @@ function App() {
     fetchGallery();
   }, []);
 
-
+  //GET request to our server
   const fetchGallery = () => {
     axios({
       method: 'GET',
