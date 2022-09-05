@@ -1,8 +1,8 @@
 import {useState, useEffect} from 'react';
 import React from 'react';
 import './App.css';
-import axios from 'axios'; //needed?
-import GalleryList from '../GalleryList/GalleryList'
+import axios from 'axios'; 
+import GalleryList from '../GalleryList/GalleryList';
 
 
 function App() {
@@ -11,7 +11,11 @@ function App() {
 
   ]);
 
-  useEffect(() => {
+  const likeImage = (id) => {
+    console.log('in likeImage');
+}
+ 
+ useEffect(() => {
     console.log('useEffect - page load');
     fetchGallery();
   }, []);
@@ -36,7 +40,8 @@ function App() {
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
         <p>Gallery goes here</p>
-        <GalleryList/>
+        <GalleryList galleryList={galleryItems}
+        likeImage={likeImage}/>
       </div>
     );
 }

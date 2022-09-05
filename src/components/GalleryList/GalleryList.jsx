@@ -1,15 +1,16 @@
 import {useState, useEffect} from 'react';
 
 
-function GalleryItems() {
+function GalleryList({galleryList, likeImage}) {
     return (
         <ul>
         {
-        galleryItems.map((galleryItems) => {
-          console.log(galleryItems);
-          return <li key={galleryItems.id} >
-            {galleryItems.description} likes: {galleryItems.likes}
-            <img src={galleryItems.path} />
+        galleryList.map((galleryList) => {
+          console.log(galleryList);
+          return <li key={galleryList.id} >
+            {galleryList.description} likes: {galleryList.likes}
+            <img src={galleryList.path} 
+            likeImage={likeImage} />
             </li>
 
         })
@@ -19,3 +20,5 @@ function GalleryItems() {
     }
     
 export default GalleryList;
+
+//<button onClick={() =}. likeImage(gallery.id)}
