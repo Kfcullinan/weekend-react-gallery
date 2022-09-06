@@ -41,7 +41,7 @@ function App() {
         </header>
         <p>Gallery goes here</p>
         <GalleryList galleryList={galleryItems}
-        likeImage={likeImage}/>
+        likeImage={likeImage} />
       </div>
     );
 }

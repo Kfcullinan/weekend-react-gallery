@@ -1,9 +1,10 @@
+import axios from "axios";
 import {useState, useEffect} from 'react';
-
+import GalleryItem from "../GalleryItem/GalleryItem";
 
 function GalleryList({galleryList, likeImage}) {
     return (
-        <ul>
+        <div>
         {
         galleryList.map((galleryList) => {
           console.log(galleryList);
@@ -15,7 +16,7 @@ function GalleryList({galleryList, likeImage}) {
 
         })
        }
-        </ul>
+        </div>
     );
     }
     
