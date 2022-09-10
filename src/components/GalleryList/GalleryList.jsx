@@ -1,25 +1,20 @@
-import axios from "axios";
+
 import {useState, useEffect} from 'react';
 import GalleryItem from "../GalleryItem/GalleryItem";
+import Grid from "@mui/material/Grid";
 
-function GalleryList({galleryList, likeImage}) {
+
+
+function GalleryList({galleryList, putGalleryList}) {
     return (
-        <div>
-        {
-        galleryList.map((galleryList) => {
-          console.log(galleryList);
-          return <li key={galleryList.id} >
-            {galleryList.description} likes: {galleryList.likes}
-            <img src={galleryList.path} 
-            likeImage={likeImage} />
-            </li>
-
-        })
-       }
-        </div>
-    );
-    }
+        <Grid container spacing={4}>
+            {galleryList.map((picture) => {
+                return <GalleryItem key={picture.id} picture={picture} putGalleryList = {putGalleryList} />
+            })}
+        </Grid>
+    )
+}
+    
     
 export default GalleryList;
 
-//<button onClick={() =}. likeImage(gallery.id)}
